@@ -1,0 +1,17 @@
+# Mainfiles
+.wp-config.php
+
+# Mac finder artifacts
+.DS_Store
+._.DS_Store
+._js
+._README.md
+._.gitignore
+._dist
+._*
+
+# Win explorer artifacts
+Thumbs.db
+
+# vim artifacts
+**.swp
