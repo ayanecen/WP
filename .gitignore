@@ -1,6 +1,7 @@
 # Mainfiles
-.wp-config.php
-./wp-content/uploads*
+wp-config.php
+*/wp-content/uploads*
+*/wp-content/plugins/siteguard/really-simple-captcha/tmp/*
 
 # Mac finder artifacts
 .DS_Store
