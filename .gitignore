@@ -1,5 +1,6 @@
 # Mainfiles
 .wp-config.php
+./wp-content/uploads*
 
 # Mac finder artifacts
 .DS_Store
