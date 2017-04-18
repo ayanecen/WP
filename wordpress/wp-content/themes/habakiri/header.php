@@ -49,12 +49,12 @@ echo '<meta name="twitter:image" content="'.$image[0].'">';echo "\n";
 echo '<meta property="og:image" content="'.$imgurl[2].'">';echo "\n";
 echo '<meta name="twitter:image" content="'.$imgurl[2].'">';echo "\n";
 } else {//投稿にサムネイルも画像も無い場合の処理
-echo '<meta property="og:image" content="'; bloginfo('url'); echo '/wp-content/uploads/2017/01/logo_450_ver2_75.png">';echo "\n";
-echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/wp-content/uploads/2017/01/logo_450_ver2_75.png">';echo "\n";
+echo '<meta property="og:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
 }
 } else {//単一記事ページページ以外の場合（アーカイブページやホームなど）
-echo '<meta property="og:image" content="'; bloginfo('url'); echo '/wp-content/uploads/2017/01/logo_450_ver2_75.png">';echo "\n";
-echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/wp-content/uploads/2017/01/logo_450_ver2_75.png">';echo "\n";
+echo '<meta property="og:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
 }
 ?>
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>">
