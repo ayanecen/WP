@@ -12,6 +12,53 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head prefix="og: http://ogp.me/ns# <?php echo ( is_single() || is_page() ) ? 'fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#' : 'fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#' ?>">
+<!-- ここからTwitterCard -->
+<meta name="twitter:site" content="@blueb">
+<meta name="twitter:card" content="summary">
+<!-- ここからOGP -->
+<meta property="og:type" content="blog">
+<?php
+if (is_single()){//単一記事ページの場合
+if(have_posts()): while(have_posts()): the_post();
+//echo '<meta property="og:description" content=" '.get_post_meta($post->ID, _aioseop_description, true).' ">';echo "\n";//抜粋を表示
+//echo '<meta name="twitter:description" content=" '.get_post_meta($post->ID, _aioseop_description, true).' ">';echo "\n";//抜粋を表示
+echo '<meta property="og:description" content="'; echo get_the_date(); echo '">';echo "\n";//抜粋を表示
+echo '<meta name="twitter:description" content="'; echo get_the_date(); echo '">';echo "\n";//抜粋を表示
+endwhile; endif;
+echo '<meta property="og:title" content="'; the_title(); echo '">';echo "\n";//単一記事タイトルを表示
+echo '<meta property="og:url" content="'; the_permalink(); echo '">';echo "\n";//単一記事URLを表示
+echo '<meta name="twitter:title" content="'; the_title(); echo '">';echo "\n";//単一記事タイトルを表示
+echo '<meta name="twitter:url" content="'; the_permalink(); echo '">';echo "\n";//単一記事URLを表示
+} else {//単一記事ページページ以外の場合（アーカイブページやホームなど）
+echo '<meta property="og:description" content="'; bloginfo('description'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログの説明文を表示
+echo '<meta name="twitter:description" content="'; bloginfo('description'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログの説明文を表示
+echo '<meta property="og:title" content="'; bloginfo('name'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログのタイトルを表示
+echo '<meta name="twitter:title" content="'; bloginfo('name'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログのタイトルを表示
+echo '<meta property="og:url" content="'; bloginfo('url'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログのURLを表示
+echo '<meta name="twitter:url" content="'; bloginfo('url'); echo '">';echo "\n";//「一般設定」管理画面で指定したブログのURLを表示
+}
+$str = $post->post_content;
+$searchPattern = '/<img.*?src=(["\'])(.+?)\1.*?>/i';//投稿にイメージがあるか調べる
+if (is_single()){//単一記事ページの場合
+if (has_post_thumbnail()){//投稿にサムネイルがある場合の処理
+$image_id = get_post_thumbnail_id();
+$image = wp_get_attachment_image_src( $image_id, 'full');
+echo '<meta property="og:image" content="'.$image[0].'">';echo "\n";
+echo '<meta name="twitter:image" content="'.$image[0].'">';echo "\n";
+} else if ( preg_match( $searchPattern, $str, $imgurl ) && !is_archive()) {//投稿にサムネイルは無いが画像がある場合の処理
+echo '<meta property="og:image" content="'.$imgurl[2].'">';echo "\n";
+echo '<meta name="twitter:image" content="'.$imgurl[2].'">';echo "\n";
+} else {//投稿にサムネイルも画像も無い場合の処理
+echo '<meta property="og:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+}
+} else {//単一記事ページページ以外の場合（アーカイブページやホームなど）
+echo '<meta property="og:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+echo '<meta name="twitter:image" content="'; bloginfo('url'); echo '/logo.png">';echo "\n";
+}
+?>
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
+<!-- ここまでOGP -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
