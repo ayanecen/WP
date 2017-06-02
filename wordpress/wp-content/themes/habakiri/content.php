@@ -22,6 +22,7 @@
 
 	<?php get_template_part( 'modules/link-pages' ); ?>
 	<?php get_template_part( 'modules/related-posts' ); ?>
+        <?php include_once("adsence.php") ?>
 	<?php
 	if ( comments_open() || pings_open() || get_comments_number() ) {
 		comments_template( '', true );

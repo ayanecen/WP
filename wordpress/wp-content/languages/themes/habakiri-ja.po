@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Themes - habakiri package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-10-17 14:58:07+0000\n"
+"PO-Revision-Date: 2017-05-07 00:21:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/2.3.0-alpha\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ja_JP\n"
 "Project-Id-Version: Themes - habakiri\n"
 
@@ -112,7 +112,7 @@ msgstr "エフェクトスピード ( ms )"
 
 #: inc/customizer.php:608
 msgid "Overlay opacity"
-msgstr "オーバーレイの透明度"
+msgstr "オーバーレイ不透明度"
 
 #: inc/customizer.php:622
 msgid "If 0, height is auto."
@@ -319,25 +319,25 @@ msgstr "ロゴ"
 msgid "Settings"
 msgstr "設定"
 
-#. #-#-#-#-#  habakiri.pot (habakiri 2.5.1)  #-#-#-#-#
+#. #-#-#-#-#  habakiri.pot (habakiri 2.5.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: inc/customizer.php:537 inc/customizer.php:550 inc/customizer.php:563
 msgid "Full Width ( Fluid )"
 msgstr "全幅 ( リキッド )"
 
-#. #-#-#-#-#  habakiri.pot (habakiri 2.5.1)  #-#-#-#-#
+#. #-#-#-#-#  habakiri.pot (habakiri 2.5.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: inc/customizer.php:536 inc/customizer.php:549 inc/customizer.php:562
 msgid "Full Width ( Fixed )"
 msgstr "全幅 ( 固定 )"
 
-#. #-#-#-#-#  habakiri.pot (habakiri 2.5.1)  #-#-#-#-#
+#. #-#-#-#-#  habakiri.pot (habakiri 2.5.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: inc/customizer.php:535 inc/customizer.php:548 inc/customizer.php:561
 msgid "No Sidebar"
 msgstr "サイドバーなし"
 
-#. #-#-#-#-#  habakiri.pot (habakiri 2.5.1)  #-#-#-#-#
+#. #-#-#-#-#  habakiri.pot (habakiri 2.5.2)  #-#-#-#-#
 #. Template Name of the plugin/theme
 #: inc/customizer.php:534 inc/customizer.php:547 inc/customizer.php:560
 msgid "Left Sidebar"
@@ -433,31 +433,31 @@ msgstr "WordPress"
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: functions.php:219 functions.php:265
+#: functions.php:220 functions.php:266
 msgid "<cite class=\"fn\">%1$s</cite> said on %2$s at %3$s"
 msgstr "<cite class=\"fn\">%1$s</cite> said on %2$s at %3$s"
 
-#: functions.php:214
+#: functions.php:215
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: functions.php:165
+#: functions.php:166
 msgid "Footer Widget Area"
 msgstr "フッターウィジェットエリア"
 
-#: functions.php:163 inc/customizer.php:160 inc/customizer.php:428
+#: functions.php:164 inc/customizer.php:160 inc/customizer.php:428
 msgid "Footer"
 msgstr "フッター"
 
-#: functions.php:154 functions.php:156
+#: functions.php:155 functions.php:157
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: functions.php:134
+#: functions.php:135
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
-#: functions.php:133 inc/customizer.php:185 inc/customizer.php:446
+#: functions.php:134 inc/customizer.php:185 inc/customizer.php:446
 msgid "Global Navigation"
 msgstr "グローバルナビゲーション"
 

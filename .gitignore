@@ -17,3 +17,7 @@ Thumbs.db
 
 # vim artifacts
 **.swp
+
+# analysis
+adsence.php
+analyticstracking.php
