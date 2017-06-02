@@ -93,4 +93,5 @@ if ( post_password_required() ) {
 		<?php endif; ?>
 	<!-- end #trackback --></div>
 	<?php endif; ?>
+<?php include_once("adsence.php") ?>
 <!-- end #commentarea --></div>
