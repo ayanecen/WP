@@ -606,15 +606,15 @@ class Habakiri_Base_Functions {
 		do_action( 'habakiri_before_title' );
 		?>
 		<?php if ( get_query_var( 'is_related' ) ) : ?>
-		<h1 class="entry__title entry-title h4"><a href="<?php the_permalink(); ?>"><?php echo get_the_title( $post_id ); ?></a></h1>
+		<h4 class="entry__title entry-title h4"><a href="<?php the_permalink(); ?>"><?php echo get_the_title( $post_id ); ?></a></h4>
 		<?php elseif ( is_page() ) : ?>
 			<?php if ( !is_page_template( 'templates/front-page.php' ) && !is_page_template( 'templates/rich-front-page.php' ) ) : ?>
 			<h1 class="entry__title"><?php echo get_the_title( $post_id ); ?></h1>
 			<?php endif; ?>
 		<?php elseif ( is_single() ) : ?>
-		<h1 class="entry__title entry-title"><?php echo get_the_title( $post_id ); ?></h1>
+		<h2 class="entry__title entry-title"><?php echo get_the_title( $post_id ); ?></h2>
 		<?php else : ?>
-		<h1 class="entry__title entry-title h3"><a href="<?php the_permalink(); ?>"><?php echo get_the_title( $post_id ); ?></a></h1>
+		<h3 class="entry__title entry-title h3"><a href="<?php the_permalink(); ?>"><?php echo get_the_title( $post_id ); ?></a></h3>
 		<?php endif; ?>
 		<?php
 		do_action( 'habakiri_after_title' );
